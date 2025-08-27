@@ -39,7 +39,7 @@ scraper-emplois/
 ## Installation
 
 1. **Cloner le projet :**
-```bash
+
 git clone https://github.com/ton-utilisateur/scraper-emplois.git
 cd scraper-emplois
 
@@ -51,11 +51,9 @@ source .venv/bin/activate  # Linux / Mac
 
 pip install -r requirements.txt
 
-3. ** Configuer le fichier .env :**
+3. **Configuer le fichier .env :**
 API_KEY=
 TARGET_URL=https://www.optioncarriere.com/emploi?s=orthoptiste&l=France
-
-4. **Utilisation**
 
 Lancer le scraper :
 python main.py
