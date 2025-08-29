@@ -1,129 +1,107 @@
-# Portfolio Python
+# Bot Automatisation
 
-Bienvenue dans mon **portfolio Python** !  
-Ce repository contient trois projets distincts, chacun avec son propre environnement virtuel et ses dépendances, démontrant différentes compétences en **web scraping**, **automatisation** et **création d’API**.
+![Python](https://img.shields.io/badge/python-3.13-blue)
+![Smoke Tests](https://img.shields.io/badge/smoke-tests%20passed-brightgreen)
+
+Bienvenue dans le projet **Bot Automatisation** !  
+Ce projet permet d’automatiser des tâches répétitives sur le web grâce à **Selenium**, tout en utilisant des tests automatisés pour garantir le bon fonctionnement du bot.
 
 ---
 
-## 1. Scraper Emplois
+## Description
 
-**Description :**  
-Projet permettant de collecter des offres d’emploi depuis différents sites web, de les analyser et de les stocker pour un usage ultérieur.
+Le bot peut :
 
-**Structure :**
+- Remplir automatiquement des formulaires web.
+- Effectuer des recherches sur Google et extraire des résultats.
+- Prendre des captures d’écran des pages web.
+- Vérifier le statut du bot et la connectivité internet.
 
-scraper-emplois/
-├─ .venv/ # Environnement virtuel du projet
-├─ main.py # Script principal
-├─ smoke_test.py # Test rapide des dépendances
-├─ requirements.txt # Liste des packages Python nécessaires
-├─ README.md # README spécifique au projet
-├─ .env.example # Exemple de fichier de variables d'environnement
-├─ pyproject.toml # Configuration pour l'éditeur et formatage (Black, Ruff)
-└─ .gitignore # Fichiers/dossiers à ignorer par Git
+Le projet inclut également des **smoke tests** pour valider rapidement l’installation et le fonctionnement du bot.
 
-## 2. Bot Automatisation
+---
 
-**Description :**
-Bot pour automatiser des tâches répétitives sur le web, en utilisant Selenium pour interagir avec les navigateurs et effectuer des actions automatiquement.
-
-**Structure :**
+## Structure du projet
 
 bot-automatisation/
-├─ .venv/
-├─ main.py
-├─ smoke_test.py
-├─ requirements.txt
-├─ README.md
-├─ .env.example
-├─ pyproject.toml
-└─ .gitignore
+├─ .venv/ # Environnement virtuel
+├─ main.py # Script principal du bot
+├─ bot/ # Modules du bot
+├─ tests/ # Tests Pytest
+│ ├─ test_fill_form.py
+│ ├─ test_google_search.py
+│ ├─ test_ping.py
+│ ├─ test_screenshot.py
+│ ├─ test_bot_status.py
+│ └─ smoke_test.py
+├─ conftest.py # Fixtures pour les tests
+├─ requirements.txt # Dépendances Python
+├─ screenshots/ # Captures d'écran générées par le bot
+├─ screenshot.png # Exemple de capture d’écran
+├─ README.md # Ce fichier
+├─ pyproject.toml # Configuration pour l'éditeur et formatage
+└─ .gitignore # Fichiers/dossiers à ignorer
+
+## Technologies utilisées 
+
+- Python 3.13  
+- Selenium  
+- requests  
+- webdriver-manager  
+- python-dotenv  
+- pytest  
+- black (formatage)  
+- ruff (linting)  
+
+## Installation et utilisation
+
+1. Cloner le projet :
+
+bash
+git clone https://github.com/atmitim/portfolio-python.git
+cd portfolio-python/bot-automatisation
+
+2. Créer et activer l’environnement virtuel :
+
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS / Linux
+source .venv/bin/activate
+
+3. Installer les dépendances :
+
+pip install -r requirements.txt
+
+4. Copier le fichier d’exemple .env.example en .env et remplir les variables nécessaires (ex: TARGET_URL).
+
+5. Lancer le smoke test pour vérifier que tout fonctionne correctement :
+
+python tests/smoke_test.py
 
 
-Technologies utilisées :
-Python, requests, Selenium, webdriver-manager, python-dotenv, pytest, black, ruff.
+## Structure des tests
 
-Exécuter le smoke test :
+tests/smoke_test.py : test rapide pour vérifier que Selenium et requests fonctionnent.
 
-cd bot-automatisation
-source .venv/Scripts/activate
-python smoke_test.py
+tests/test_fill_form.py : test de remplissage de formulaire.
 
+tests/test_google_search.py : test de recherche Google.
 
-Vérifie que Selenium et requests sont installés et fonctionnent correctement.
+tests/test_ping.py : test de connectivité.
 
-Ouvre un navigateur Chrome via Selenium pour tester l’automatisation.
+tests/test_screenshot.py : test de capture d’écran.
 
-## 3. API Rapport
+tests/test_bot_status.py : test du statut du bot.
 
-**Description :**
-API pour générer et exposer des rapports de données, utilisant FastAPI. Elle peut être utilisée pour collecter, transformer et fournir des données à d’autres services.
-
-**Structure :**
-
-api-rapport/
-├─ .venv/
-├─ main.py
-├─ smoke_test.py
-├─ requirements.txt
-├─ README.md
-├─ .env.example
-├─ pyproject.toml
-└─ .gitignore
-
-
-Technologies utilisées :
-Python, FastAPI, requests, python-dotenv, pytest, black, ruff.
-
-Exécuter le smoke test :
-
-cd api-rapport
-source .venv/Scripts/activate
-python smoke_test.py
-
-
-Vérifie que FastAPI et requests sont installés et que l’API peut être initialisée correctement.
-
-## Instructions Générales
-
-**Cloner le repository :**
-
-git clone https://github.com/ton-username/portfolio-python.git
-cd portfolio-python
-
-
-Pour chaque projet :
-
-cd <nom-du-projet>
-python -m venv .venv               # Créer le venv si nécessaire
-source .venv/Scripts/activate      # Activer le venv
-pip install -r requirements.txt    # Installer les dépendances
-python smoke_test.py               # Vérifier que tout fonctionne
-
-
-Variables d’environnement :
-
-Copier .env.example en .env et remplir les variables nécessaires à chaque projet (ex: TARGET_URL pour le bot).
-
-## Structure générale du repository
-portfolio-python/
-├─ scraper-emplois/
-├─ bot-automatisation/
-├─ api-rapport/
-└─ README.md
-
-
-Chaque projet a son propre venv, requirements.txt et smoke_test.py pour tester rapidement le bon fonctionnement.
-
-
-## Licence
-
-Ce projet est sous licence MIT.
-Voir le fichier LICENSE pour plus de détails.
 
 ## Contact
 
 Pour toute question ou collaboration :
-Email : atmitimyahya@outlook.fr
 
+Email : atmitimyahya@outlook.fr
 GitHub : atmitim
+
+
+
+

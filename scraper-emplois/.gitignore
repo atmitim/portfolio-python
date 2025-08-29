@@ -10,3 +10,4 @@ __pycache__/
 
 # Fichiers .env réels (sécurité)
 .env
+
