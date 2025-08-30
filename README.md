@@ -1,107 +1,70 @@
-# Bot Automatisation
+# Portfolio Python 🐍
 
-![Python](https://img.shields.io/badge/python-3.13-blue)
-![Smoke Tests](https://img.shields.io/badge/smoke-tests%20passed-brightgreen)
-
-Bienvenue dans le projet **Bot Automatisation** !  
-Ce projet permet d’automatiser des tâches répétitives sur le web grâce à **Selenium**, tout en utilisant des tests automatisés pour garantir le bon fonctionnement du bot.
+Bienvenue dans mon portfolio Python !  
+Ce dépôt regroupe plusieurs projets réalisés dans le cadre de mes apprentissages et expérimentations en développement.  
+Chaque projet illustre des compétences spécifiques en Python : automatisation, scraping, API, tests, et organisation de code.
 
 ---
 
-## Description
+## 📂 Projets inclus
 
-Le bot peut :
-
-- Remplir automatiquement des formulaires web.
-- Effectuer des recherches sur Google et extraire des résultats.
-- Prendre des captures d’écran des pages web.
-- Vérifier le statut du bot et la connectivité internet.
-
-Le projet inclut également des **smoke tests** pour valider rapidement l’installation et le fonctionnement du bot.
+### 1. Bot Automatisation 🤖
+- **Description** : Un bot développé en Python pour automatiser certaines tâches répétitives (navigation web, formulaires, screenshots, etc.).
+- **Technologies utilisées** : `selenium`, `pytest`, `python-dotenv`
+- **Fonctionnalités** :
+  - Interaction avec des pages web
+  - Génération de captures d’écran
+  - Tests automatisés
+- 📁 [Dossier du projet](./bot_automatisation)
 
 ---
 
-## Structure du projet
+### 2. API Rapport 📊
+- **Description** : Une API Python permettant de générer et gérer des rapports.
+- **Technologies utilisées** : `FastAPI`, `Pydantic`
+- **Fonctionnalités** :
+  - Endpoints REST pour la création et la récupération de rapports
+  - Gestion de la configuration via fichiers `.env`
+- 📁 [Dossier du projet](./api-rapport)
 
-bot-automatisation/
-├─ .venv/ # Environnement virtuel
-├─ main.py # Script principal du bot
-├─ bot/ # Modules du bot
-├─ tests/ # Tests Pytest
-│ ├─ test_fill_form.py
-│ ├─ test_google_search.py
-│ ├─ test_ping.py
-│ ├─ test_screenshot.py
-│ ├─ test_bot_status.py
-│ └─ smoke_test.py
-├─ conftest.py # Fixtures pour les tests
-├─ requirements.txt # Dépendances Python
-├─ screenshots/ # Captures d'écran générées par le bot
-├─ screenshot.png # Exemple de capture d’écran
-├─ README.md # Ce fichier
-├─ pyproject.toml # Configuration pour l'éditeur et formatage
-└─ .gitignore # Fichiers/dossiers à ignorer
+---
 
-## Technologies utilisées 
+### 3. Scraper Emplois 🔍
+- **Description** : Un scraper d’offres d’emploi développé en Python.
+- **Technologies utilisées** : `BeautifulSoup`, `requests`
+- **Fonctionnalités** :
+  - Extraction d’annonces depuis Indeed
+  - Sauvegarde des pages HTML
+  - Analyse des données collectées
+- 📁 [Dossier du projet](./scraper-emplois)
 
-- Python 3.13  
-- Selenium  
-- requests  
-- webdriver-manager  
-- python-dotenv  
-- pytest  
-- black (formatage)  
-- ruff (linting)  
+---
 
-## Installation et utilisation
+## 🚀 Installation & Utilisation
 
-1. Cloner le projet :
+Clonez le dépôt :
 
-bash
+```bash```
 git clone https://github.com/atmitim/portfolio-python.git
-cd portfolio-python/bot-automatisation
+cd portfolio-python
 
-2. Créer et activer l’environnement virtuel :
+Chaque projet contient son propre fichier requirements.txt ou pyproject.toml.
 
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
+## Installez les dépendances dans un environnement virtuel :
 
-3. Installer les dépendances :
+python -m venv venv
+source venv/bin/activate   # Linux / macOS
+venv\Scripts\activate      # Windows
 
 pip install -r requirements.txt
 
-4. Copier le fichier d’exemple .env.example en .env et remplir les variables nécessaires (ex: TARGET_URL).
+✅ Tests
 
-5. Lancer le smoke test pour vérifier que tout fonctionne correctement :
+Certains projets contiennent des tests unitaires. Pour les exécuter : 
 
-python tests/smoke_test.py
+pytest
 
+📌 Auteur
 
-## Structure des tests
-
-tests/smoke_test.py : test rapide pour vérifier que Selenium et requests fonctionnent.
-
-tests/test_fill_form.py : test de remplissage de formulaire.
-
-tests/test_google_search.py : test de recherche Google.
-
-tests/test_ping.py : test de connectivité.
-
-tests/test_screenshot.py : test de capture d’écran.
-
-tests/test_bot_status.py : test du statut du bot.
-
-
-## Contact
-
-Pour toute question ou collaboration :
-
-Email : atmitimyahya@outlook.fr
-GitHub : atmitim
-
-
-
-
+👤 ATMITIM Yahya
+🔗 profil GitHub : atmitim
