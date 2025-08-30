@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Ventes mensuelles",
+    "start_date": "2025-08-01",
+    "end_date": "2025-08-30",
+    "generated_at": "2025-08-30T19:52:32.527338",
+    "csv_file": "reports\\Ventes_mensuelles_2025-08-30T195232527338.csv",
+    "excel_file": "reports\\Ventes_mensuelles_2025-08-30T195232527338.xlsx"
+  },
+  {
+    "title": "Ventes mensuelles",
+    "start_date": "2025-08-01",
+    "end_date": "2025-08-30",
+    "generated_at": "2025-08-30T19:57:21.349480",
+    "csv_file": "reports\\Ventes_mensuelles_2025-08-30T195721349480.csv",
+    "excel_file": "reports\\Ventes_mensuelles_2025-08-30T195721349480.xlsx"
+  },
+  {
+    "title": "Ventes mensuelles",
+    "start_date": "2025-08-01",
+    "end_date": "2025-08-30",
+    "generated_at": "2025-08-30T19:58:20.820300",
+    "csv_file": "reports\\Ventes_mensuelles_2025-08-30T195820820300.csv",
+    "excel_file": "reports\\Ventes_mensuelles_2025-08-30T195820820300.xlsx"
+  }
+]
