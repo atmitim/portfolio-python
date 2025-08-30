@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-dotenv
+requests
+pytest
+black
+ruff
+webdriver-manager
+fastapi
+selenium==4.12.0
+httpx
+pytest-mock
+starlette[full]
